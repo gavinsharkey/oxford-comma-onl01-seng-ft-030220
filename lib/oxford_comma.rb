@@ -1,4 +1,3 @@
-# There's definitely a better way to do this...
 def oxford_comma(array)
   if array.length == 1
     array[0]
