@@ -1,11 +1,8 @@
 # There's definitely a better way to do this...
 def oxford_comma(array)
-  if array.length == 2
-    array.join(' and ')
-  elsif array.length > 1
-    str = array[0..array.length - 2].join(', ') + ','
-    str << " and #{array[-1]}"
+  if array.length == 1
+    array[0]
   else
-    array.join
-  end
+    array[-1].prepend('and ')
+    array.length == 2 ? array.join(' ') : array.join(', ')
 end
